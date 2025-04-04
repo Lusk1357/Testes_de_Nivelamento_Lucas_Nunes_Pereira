@@ -1,0 +1,40 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .spinner-border {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .table-responsive {
+    max-height: 600px;
+    overflow-y: auto;
+ }
+ 
+ .table-responsive table {
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .table-responsive thead th {
+  position: sticky;
+  top: 0;
+  background: #343a40;
+  z-index: 10;
+}
+
+/* Melhoria no spinner */
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+.spinner-border {
+  display: inline-block;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border .75s linear infinite;
+}

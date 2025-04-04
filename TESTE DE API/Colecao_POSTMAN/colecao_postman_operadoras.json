@@ -1,0 +1,80 @@
+{
+  "info": {
+    "name": "Busca de Operadoras - Teste API",
+    "_postman_id": "12345678-abcd-1234-efgh-1234567890ab",
+    "description": "Coleção para testar a API de busca de operadoras com filtros textuais.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buscar todas as operadoras",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/operadoras",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "operadoras"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por CNPJ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/operadoras?cnpj=19541931000125",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "operadoras"
+          ],
+          "query": [
+            {
+              "key": "cnpj",
+              "value": "19541931000125"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por Razão Social e UF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/operadoras?razao_social=saude&uf=SP",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "operadoras"
+          ],
+          "query": [
+            {
+              "key": "razao_social",
+              "value": "saude"
+            },
+            {
+              "key": "uf",
+              "value": "SP"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
