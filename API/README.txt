@@ -1,11 +1,13 @@
+# PROJETO DE CONSULTA E EXTRAÇÃO DE DADOS DA ANS
 
-# Consulta de Operadoras Ativas na ANS
+===================================
+1. CONSULTA DE OPERADORAS ATIVAS (Frontend + Backend)
+===================================
 
-Este projeto consiste em um frontend construído com Vue 3 (utilizando Vite) e um backend em Python com FastAPI. O objetivo é permitir buscas por operadoras ativas cadastradas na ANS.
+Frontend construído com Vue 3 (utilizando Vite) e um backend em Python com FastAPI.
+O objetivo é permitir buscas por operadoras ativas cadastradas na ANS.
 
 ---
-
-## ✅ Requisitos
 
 - Node.js (versão 16 ou superior)
 - Python 3.9+
@@ -13,7 +15,7 @@ Este projeto consiste em um frontend construído com Vue 3 (utilizando Vite) e u
 
 ---
 
-## 🔧 Instalação e Execução do Frontend (Vue + Vite)
+INSTALAÇÃO E EXECUÇÃO DO FRONTEND (Vue + Vite):
 
 1. Acesse a pasta do frontend:
 
@@ -27,36 +29,31 @@ Este projeto consiste em um frontend construído com Vue 3 (utilizando Vite) e u
 
    npm run dev
 
-4. Acesse o frontend no navegador:
+4. Acesse no navegador:
 
    http://localhost:5173
 
 ---
 
-## 🚀 Instalação e Execução do Backend (FastAPI)
+INSTALAÇÃO E EXECUÇÃO DO BACKEND (FastAPI):
 
-1. Crie um ambiente virtual (opcional, mas recomendado):
+1. Acesse a pasta `API`:
 
-   python -m venv venv
-   source venv/bin/activate  # Linux/macOS
-   venv\Scripts\activate     # Windows
+   cd API
 
-2. Instale as dependências do backend:
+2. Instale as dependências:
 
-   pip install fastapi uvicorn pandas
+   pip install -r requirements.txt
 
-3. Execute o servidor:
+3. Execute o servidor FastAPI:
 
-   uvicorn main:app --reload
+   uvicorn servidor:app --host 0.0.0.0 --port 8000
 
-   Isso irá rodar o backend na porta padrão:
+   A API estará disponível em:
    http://localhost:8000
 
 ---
-
-## 🌐 Conexão Frontend <-> Backend
-
-O Vite já está configurado para fazer proxy de requisições para o backend.
+Conexão do Frontend com Backend
 
 No arquivo vite.config.js:
 
@@ -76,7 +73,7 @@ GET /api/operadoras?cnpj=12345678
 
 ---
 
-## 📁 Estrutura de Arquivos (Frontend)
+Estrutura de Arquivos (Frontend)
 
 src/
 ├── components/
@@ -92,13 +89,8 @@ src/
 
 ---
 
-## 📝 Observações
+Observações
 
 - O Bootstrap já está instalado via npm e importado em main.js
 - O Vue Router está configurado e deve funcionar corretamente ao navegar entre rotas
 - Certifique-se de que App.vue contenha <router-view /> para exibir as rotas
-
----
-
-Lucas Nunes Pereira
-Projeto de Nívelamento - Consulta de Operadoras ANS
